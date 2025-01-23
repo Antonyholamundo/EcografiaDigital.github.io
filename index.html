@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ecografías</title>
+
+    <!-- Bootstrap CSS -->
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="stilo.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  shadow-sm">
+        <div class="container-fluid">
+            <!-- Botón de búsqueda móvil -->
+            <button class="btn d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#topbarSearch">
+                <i class="fas fa-search"></i>
+            </button>
+               <div class="logo d-flex align-items-center">
+            <img src="./img/logo.png" alt="Logo de la empresa" class="logo-img mr-2" style="height: 28px;">
+            <h1 class="m-3 titulo-ecografia">Ecografía Digital</h1>
+        </div>
+           
+    
+            <!-- Elementos de la derecha -->
+            <ul class="navbar-nav ms-auto align-items-center">
+                <!-- Notificaciones -->
+                <li class="nav-item dropdown me-3">
+                    <a class="nav-link position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                            <span class="visually-hidden">notificaciones sin leer</span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm" style="width: 300px;">
+                        <li><h6 class="dropdown-header">Notificaciones</h6></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="#">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-user-clock text-primary"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="mb-0">Nueva cita programada</p>
+                                    <small class="text-muted">Hace 5 minutos</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center py-2" href="#">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-file-medical text-success"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="mb-0">Resultados listos</p>
+                                    <small class="text-muted">Hace 30 minutos</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <!-- Perfil de usuario -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./img/doc.jpg" class="rounded-circle me-2" alt="Usuario" width="32" height="32">
+                        <span>Dr. Godoy</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Mi Perfil</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class=" border-end" id="sidebar-wrapper">
+            
+            <div class="list-group list-group-flush">
+                <a href="index.html" class="list-group-item list-group-item-action ">
+                    <i class="fas fa-home"></i> Inicio
+                </a>
+                <a href="paciente.html" class="list-group-item list-group-item-action ">
+                    <i class="fas fa-users"></i> Pacientes
+                </a>
+                <a href="calendario.html" class="list-group-item list-group-item-action ">
+                    <i class="fas fa-calendar"></i> Calendario
+                </a>
+            </div>
+        </div>
+
+      
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Sistema JS -->
+    <script src="sistema.js"></script>
+</body>
+</html>

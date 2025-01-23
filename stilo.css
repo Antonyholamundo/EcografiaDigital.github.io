@@ -1,0 +1,522 @@
+/*  Variables CSS para facilitar la personalización  */
+:root {
+    --primary-color: #007bff; /* Color principal del sidebar */
+    --secondary-color: #e9ecef; /* Color de fondo del contenido */
+    --accent-color: #6f42c1; /* Color de acento (puedes cambiarlo) */
+    --text-color: #343a40; /* Color del texto principal */
+    --table-header-bg: #f8f9fa; /* Color de fondo del encabezado de la tabla */
+}
+h1 {
+    color: white;
+    position: relative; /* O "absolute" */
+    top: 0px; 
+    left: 20px;
+  }
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif; /* Fuente moderna y legible */
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+#wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+
+
+/* Topbar */
+nav.navbar {
+    background-color: #007bff; /* Cambiado a azul */
+    padding: 2px;
+  }
+  
+  nav.navbar .navbar-nav .nav-link {
+    color: white;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  nav.navbar .navbar-nav .nav-link:hover {
+    color: #ffc107;
+  }
+  
+  nav.navbar .navbar-nav .dropdown-menu {
+    background-color: #f8f9fa;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+/* Estilos del sidebar */
+.list-group-item-action {
+    
+    background-color: transparent !important; /*  !important para asegurar la sobreescritura */
+}
+#sidebar-wrapper {
+    
+    background-color: var(--primary-color);
+    color: #fff;
+    min-width: 250px;
+    transition: width 0.3s ease-in-out; /* Transición suave al cambiar el ancho */
+}
+
+.sidebar-heading {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.list-group-item {
+    border: none;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.2s;
+    color: #ced4da;
+
+}
+.list-group-item:hover,.list-group-item:focus {
+    background-color:#343a40;
+    color:#fff;
+
+}
+.list-group-item.active {
+
+    color:#fff;
+
+}
+
+.list-group-item .fas {
+    margin-right: 0.5rem;
+    width: 1.2em;
+    text-align: center;
+}
+.list-group-item:first-child {
+  margin-top:15px;
+}
+
+
+/* Estilos del contenido principal */
+#page-content-wrapper {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--secondary-color);
+
+
+}
+
+.navbar {
+    padding-left: 1rem; /* padding izquierdo */
+    padding-right: 1rem; /* padding derecho */
+    padding: 0;
+    background-color: var(--accent-color); /* Color de acento para la navbar */
+    color: #380c0c;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 500;
+}
+
+.navbar-toggler-icon { /* Estilo del icono hamburguesa */
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+
+
+/* Estilos de la tabla */
+.table {
+    border-collapse: collapse; /* Colapsar bordes */
+    margin-top: 1rem;
+
+
+}
+
+.table thead th {
+    background-color: var(--table-header-bg);
+    border: 1px solid #dee2e6; /* Borde sutil */
+    color: var(--text-color);
+    font-weight: 500; /* Semi-negrita */
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.table tbody td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+
+
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.03); /* Color de fondo alternado más sutil */
+}
+
+/*  Estilos de la paginación y búsqueda */
+.pagination {
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+
+
+
+.modal-header {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+
+.form-label{
+    font-weight:50PX;
+}
+
+
+
+/* Estilos para el botón "Nuevo Paciente" */
+.btn-light{
+   border:1px solid #adb5bd;
+
+}
+
+
+/* Media queries para responsividad */
+@media (max-width: 76px) {
+
+    #sidebar-wrapper {
+        width: 0; /* Oculta el sidebar completamente en pantallas pequeñas */
+
+    }
+
+    #sidebar-wrapper.active {
+        width: 250px; /* Muestra el sidebar al activarse */
+    }
+
+    #page-content-wrapper {
+        padding-left: 0; /* Elimina el padding izquierdo en pantallas pequeñas */
+    }
+}
+
+/* Reset y configuración básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  /* Topbar */
+  nav.navbar {
+    background-color: #007bff; /* Cambiado a azul */
+    padding: 8px;
+  }
+  
+  nav.navbar .navbar-nav .nav-link {
+    color: white;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  nav.navbar .navbar-nav .nav-link:hover {
+    color: #ffc107;
+  }
+  
+  nav.navbar .navbar-nav .dropdown-menu {
+    background-color: #f8f9fa;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sidebar */
+  #sidebar {
+    background-color: #343a40;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    padding-top: 20px;
+    transition: width 0.3s;
+  }
+  
+  #sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  #sidebar a:hover {
+    background-color: #495057;
+  }
+  
+  #sidebar .sidebar-header .logo {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  #sidebar.active {
+    width: 80px;
+  }
+  
+  /* Contenido */
+  #content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+  
+  #sidebar.active + #content {
+    margin-left: 80px;
+  }
+  
+  /* Botón de sidebar */
+  #sidebarCollapse {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #sidebarCollapse:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Tablas */
+  .table {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #ffffff;
+  }
+  
+  /* Botones */
+  button {
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: flex ;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modales */
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal-footer .btn-secondary {
+    background-color: #f0f0f0;
+    border: none;
+  }
+  
+  .modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .modal-footer .btn-primary {
+    background-color: #007bff;
+  }
+  
+  .modal-footer .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  
+  /* Mostrar el fondo del modal cuando se activa */
+  .modal-backdrop.show {
+    display: block;
+  }
+  
+  /* Estilos para el botón de cerrar en el modal de citas */
+  button.btn-danger {
+    font-size: 1.1rem; /* Tamaño de la fuente */
+    padding: 5px 15px; /* Ajusta el padding para hacerlo más estrecho */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 50; /* Eliminar borde */
+    background-color: #dc3545; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    cursor: pointer; /* Cambiar cursor a mano */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+  }
+  
+  /* Efecto de hover para el botón */
+  button.btn-danger:hover {
+    background-color: #c82333; /* Fondo rojo oscuro al pasar el mouse */
+  }
+  
+  /* Efecto de focus (cuando el botón está enfocado) */
+  button.btn-danger:focus {
+    outline: none; /* Eliminar el borde de enfoque por defecto */
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.6); /* Agregar sombra sutil cuando el botón está enfocado */
+  }
+  
+  /* Estilos específicos para FullCalendar */
+
+  /* Cambiar el fondo y los bordes de los días del calendario */
+  .fc-daygrid-day {
+    border: 1px solid #ddd;
+  }
+  
+  .fc-daygrid-day:hover {
+    background-color: #f0f0f0; /* Fondo gris claro al pasar el mouse */
+  }
+  
+  /* Estilos para las celdas de días del calendario */
+  .fc-daygrid-day-top {
+    color: #007bff;
+  }
+  
+  /* Títulos de la semana (lunes, martes, etc.) */
+  .fc-col-header-cell {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Fondo del mes y días seleccionados */
+  .fc-daygrid-day-number {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .fc-daygrid-day-number.fc-daygrid-day-selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Estilo de la vista de todo el calendario */
+  .fc-daygrid-month-view {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  /* Botón de abrir citas */
+  #citasModal .btn-danger {
+    background-color: #dc3545; /* Rojo */
+    border: none;
+  }
+  
+  #citasModal .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Estilos para el contenedor del login */
+  .login-wrapper {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Altura mínima de toda la pantalla */
+    background-color: #f8f9fa; /* Color de fondo ligero (puedes personalizarlo) */
+    padding: 20px; /* Añade algo de espacio alrededor en pantallas pequeñas */
+}
+.login-container {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Alinea el texto dentro de los campos */
+  max-width: 400px; /* Limita el ancho del formulario */
+  margin: auto; /* Centra el formulario horizontalmente */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un diseño más atractivo */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+}
+form input, form button {
+  width: 100%; /* Ocupan todo el ancho del contenedor */
+  max-width: 300px; /* Limita el ancho máximo */
+  margin-bottom: 15px; /* Espaciado entre los campos */
+}
+
+/* Estilos para el encabezado */
+.login-container h1 {
+  font-size: 1.8rem; /* Tamaño de fuente del título */
+  font-weight: 500; /* Negrita moderada */
+  color: var(--primary-color); /* Usa la variable de color principal */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos de los labels */
+.login-container .form-label {
+  font-weight: 500; /* Texto ligeramente más grueso */
+  color: var(--text-color); /* Usa el color de texto principal */
+}
+
+/* Estilos para los inputs */
+.login-container .form-control {
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px;
+  font-size: 1rem; /* Tamaño de texto estándar */
+  transition: border-color 0.3s; /* Transición al enfocar */
+}
+
+.login-container .form-control:focus {
+  border-color: var(--primary-color); /* Color del borde al enfocar */
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}
+
+/* Estilos del botón */
+.login-container .btn-primary {
+  background-color: var(--primary-color); /* Usa el color principal */
+  border: none;
+  border-radius: 5px;
+  padding: 13px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+}
+
+.login-container .btn-primary:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+  transform: scale(1.02); /* Ligero aumento al hacer hover */
+}
+
+/* Enlace de registro */
+.login-container p a {
+  color: var(--primary-color);
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500;
+}
+
+.login-container p a:hover {
+  text-decoration: underline;
+}
+
+/* Espaciado entre elementos */
+.login-container .mb-3 {
+  margin-bottom: 1rem;
+}
